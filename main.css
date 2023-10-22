@@ -1,0 +1,167 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    margin: 0;
+
+    font-family: 'Sometype Mono', monospace;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 15px 50px;
+    background: linear-gradient(92.7deg, #4169E1 0%, #B0C4DE 100%), #232323;
+}
+
+.header__title {
+    margin-bottom: 20px;
+    font-family: 'Sometype Mono', monospace;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.18;
+    text-align: center;
+    color: #ffffff;
+}
+
+.header__form {
+    display: flex;
+    justify-content: space-between;
+    width: 460px;
+
+    height: 54px;
+    background: white;
+    border-radius: 6px;
+}
+
+.form__input {
+    border: white;
+    border-radius: 6px;
+    color: #000;
+    padding: 15px;
+    flex-grow: 1;
+
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+
+}
+
+.form__input:active {
+    border: white;
+}
+
+.form__btn {
+    color: #FFF;
+    width: 145px;
+    height: 54px;
+    background: #800000;
+    border-radius: 6px;
+    border: maroon;
+
+    /*font-width: 500;*/
+    font-size: 20px;
+    line-height: 24px;
+
+    transition: background-color 0.2s ease-in;
+}
+
+.form__btn:hover {
+    background: #D2691E;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    padding: 30px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+    width: 360px;
+}
+
+.card::before {
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    z-index: -1;
+    content: "";
+    width: calc(100% - 20px);
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+    border-radius: 6px;
+
+}
+
+.card__city {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    color: black;
+}
+
+.card__city-country {
+    display: inline-block;
+    vertical-align: text-top;
+
+    padding: 3px 5px;
+    background-color: #800000;
+    border-radius: 6px;
+
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.card__weather {
+
+}
+
+.card__value {
+    font-size: 92px;
+    line-height: 1;
+    color: #000;
+}
+
+.card__value sup {
+    font-size: 50%;
+}
+
+.card__img {
+
+}
+
+.card__description {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 8px;
+    background: #B0C4DE;
+
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: #B0C4DE;
+}
+
+.footer a {
+    color: #800000;
+    text-decoration: none;
+}
