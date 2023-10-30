@@ -6,10 +6,14 @@ const input = document.querySelector('#inputCity');
 const button = document.querySelector('#btn');
 const result = document.getElementById("result");
 
-let cityData = window.localStorage.getItem('city');
-showCard(JSON.parse(cityData));
+let cityData = JSON.parse(window.localStorage.getItem('city'));
+if (cityData !== null) {
+    showCard(cityData);
+}
+
 
 button.addEventListener('click', async (e) => {
+    input.innerHTML = "";
     e.preventDefault();
 
     let city = input.value.trim();
