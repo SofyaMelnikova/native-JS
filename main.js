@@ -6,13 +6,8 @@ const input = document.querySelector('#inputCity');
 const button = document.querySelector('#btn');
 const result = document.getElementById("result");
 
-$(document).ready(function () {
-    let cityData = window.localStorage.getItem('city');
-
-    showCard(JSON.parse(cityData));
-})
-
-
+let cityData = window.localStorage.getItem('city');
+showCard(JSON.parse(cityData));
 
 button.addEventListener('click', async (e) => {
     e.preventDefault();
