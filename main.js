@@ -38,7 +38,8 @@ function showCard(jsonData){
 async function getWeather (city) {
     const query = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
-    const response = await fetch(query);
+    const response = await fetch(query)
+        .catch(showErrorFetch);
     return await response.json();
 }
 
@@ -100,4 +101,11 @@ function showError(jsonData) {
 function removeCard() {
     const prevCard = document.querySelector('.card');
     if (prevCard) prevCard.remove();
+}
+
+function showErrorFetch () {
+    removeCard();
+    const html = `<div class="card">Fail to fetch</div>`;
+
+    header.insertAdjacentHTML('afterend', html);
 }
